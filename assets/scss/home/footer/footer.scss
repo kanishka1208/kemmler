@@ -1,0 +1,49 @@
+@import '../../variables';
+@import '../../mixins';
+
+.footer {
+    padding-top: 114px;
+    @include mq(lg) {
+        padding-top: 80px;
+    }
+    .copyright__section {
+        padding-bottom: 20px;
+    }
+
+    .text-hov-accent {
+        color: $clr-black;
+
+        &:hover {
+            color: $clr-accent;
+        }
+    }
+
+    .list__link {
+        svg {
+
+            @include mq(md) {
+                width: 25px;
+                height: 25px;
+            }
+
+            @include mq(sm) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    .navbar {
+        &-brand {
+            img {
+                @include mq(lg) {
+                    width: 200px;
+                }
+
+                @include mq(sm) {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}

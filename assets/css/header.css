@@ -1,0 +1,199 @@
+.header {
+  position: relative;
+  background: rgb(255, 255, 255);
+  z-index: 999;
+}
+.header .navbar {
+  padding-block: 27px;
+}
+@media screen and (max-width: 992px) {
+  .header .navbar {
+    padding-block: 27px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .navbar {
+    padding-top: 24px;
+    padding-bottom: 20px;
+  }
+}
+.header .navbar-toggler {
+  border: 0;
+  padding-right: 0;
+}
+.header .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+@media screen and (max-width: 992px) {
+  .header .navbar-brand img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header .navbar-brand img {
+    width: 130px;
+  }
+}
+.header .nav-link {
+  font-family: "eudoxus sans";
+  font-weight: 500;
+  padding-inline: 0 !important;
+  font-size: 18px;
+  line-height: 24px;
+  color: #212121;
+}
+@media screen and (max-width: 992px) {
+  .header .nav-link {
+    display: inline-block;
+  }
+}
+.header .nav-link:hover {
+  color: #5BA60D;
+}
+.header .nav-item {
+  margin-right: 30px;
+}
+@media screen and (max-width: 992px) {
+  .header .nav-item {
+    margin-bottom: 20px;
+    margin-right: 0px;
+  }
+}
+.header .navbar-nav .nav-link.active,
+.header .navbar-nav .nav-link.show {
+  color: #5BA60D !important;
+}
+.header .btn_accent {
+  padding: 5px 37px !important;
+}
+.header .dropdown-toggle::after {
+  border: solid #212121;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-left: 0.5em;
+}
+.header .navbar-nav .dropdown-menu {
+  background: transparent;
+  border: 1px solid #5BA60D;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.5);
+}
+.header .navbar-nav .dropdown-menu .dropdown-item {
+  font-family: "eudoxus sans";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #212121;
+}
+.header .navbar-nav .dropdown-menu .dropdown-item:hover {
+  color: #5BA60D;
+  background: transparent;
+}
+.header--active {
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+}
+.header--active .navbar {
+  padding-block: 21px;
+}
+@media screen and (max-width: 992px) {
+  .header .offcanvas-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-inline: 50px 35px;
+  }
+}
+.header .navbar-toggler {
+  border: 0;
+  padding: 0;
+}
+.header .navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.header .navbar-toggler-icon {
+  background: url(../images/side-bar.svg) no-repeat center;
+  background-size: contain;
+}
+.header .dropdown-menu {
+  min-width: 100px;
+}
+.header .offcanvas {
+  background: #FFFFFF;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .header .offcanvas {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+}
+.header .offcanvas .btn-close {
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235BA60D'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+  opacity: 1;
+  padding: 2px;
+  margin: 20px;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+@media screen and (max-width: 576px) {
+  .header .offcanvas .btn-close {
+    margin: 10px 0px;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header .offcanvas-header {
+    padding-inline: 25px;
+    padding-top: 20px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .header .offcanvas-header .header-logo--mobile {
+    display: block !important;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

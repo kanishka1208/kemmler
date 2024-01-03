@@ -1,0 +1,111 @@
+@import '../../variables';
+@import '../../mixins';
+
+.wd_full {
+    width: 100%;
+    height: 800px;
+    @include mq(lg) {
+        height: 50vh;
+        object-fit: cover;
+    }
+}
+
+.banner {
+    h3 {
+        line-height: 55px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 259px;
+        height: 2px;
+        background-color: $clr-white !important;
+        opacity: .75;
+
+        @include mq(xxl) {
+            width: 160px;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $clr-accent !important;
+    }
+
+    .swiper-pagination {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 45px;
+        gap: 25px;
+
+        @include mq(lg) {
+            gap: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    .slide-text {
+        position: absolute;
+        left: 80px;
+        bottom: 8%;
+
+        @include mq(xxxl) {
+            left: 50px;
+            bottom: 15%;
+        }
+        @include mq(lg) {
+            left: 58px;
+            bottom: 5%;
+        }
+        @include mq(md) {
+            left: 15px;
+            bottom: 5%;
+        }
+    }
+
+    .swiper-link {
+        color: $clr-white;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 0.9px;
+        transition: all .3s ease-in-out;
+
+        @include mq(lg) {
+            font-size: 18px;
+        }
+
+        @include mq(md) {
+            font-size: 16px;
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            background: url(../images/Icon\ metro-arrow-up-right.svg);
+            width: 14px;
+            height: 14px;
+            transform: translate(0, 0);
+            transition: all .3s ease-in-out;
+
+        }
+
+        &:hover {
+            color: $clr-accent;
+
+            &::after {
+                transform: translate(4px, -4px);
+                background: url(../images/Icon\ metro-arrow-up-right-green.svg);
+            }
+        }
+    }
+}
+
+// about-us-page
+.about-banner {
+    background-color: $clr-dark;
+    padding-top: 88px;
+    padding-bottom: 84px;
+    
+    @include mq(lg) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

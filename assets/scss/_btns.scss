@@ -1,0 +1,59 @@
+@import './variables';
+@import './mixins';
+
+.btn_accent {
+    border: 2px solid $clr-accent;
+    border-radius: 9px;
+    padding: 5px 37px !important;
+    font-size: 18px;
+    line-height: 24px;
+
+    &:hover {
+        background-color: $clr-accent;
+        color: $clr-white !important;
+    }
+}
+
+.btn_secondary {
+    border: 2px solid $clr-accent;
+    background-color: $clr-accent;
+    color: $clr-white;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 5px 53px;
+    border-radius: 9px;
+
+    &:hover {
+        background-color: $clr-dark;
+    }
+}
+
+.btn__hide {
+    padding: 6px 20px 6px 18px;
+    font-size: 18px;
+    line-height: 23px;
+    border: 2px solid $clr-accent;
+    border-radius: 9px;
+
+    &:hover {
+        background-color: $clr-accent;
+        color: $clr-white;
+
+    }
+}
+
+.btn__show {
+    padding: 6px 28px;
+    background-color: $clr-accent;
+    color: $clr-white;
+    border-radius: 9px;
+    font-size: 18px;
+    line-height: 23px;
+    border: 2px solid $clr-accent;
+
+
+}
+
+.btn__custom {
+    margin-top: 57px;
+}

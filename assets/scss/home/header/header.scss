@@ -1,0 +1,191 @@
+@import '../../variables';
+@import '../../mixins';
+
+.header {
+    position: relative;
+
+    background: rgba( 255, 255, 255, 1);
+    z-index: 999;
+    .navbar {
+     padding-block:27px;
+
+        @include mq (lg) {
+            padding-block:27px;
+        }
+
+        @include mq (md) {
+            padding-top: 24px;
+            padding-bottom: 20px;
+        }
+
+        // &-nav {
+        //     @include mq(lg) {
+        //         margin-left: 19px;
+        //         margin-top: 36px;
+        //     }
+        // }
+
+        &-toggler {
+            border: 0;
+            padding-right: 0;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        &-brand {
+            img {
+                @include mq(lg) {
+                    width: 200px;
+                }
+
+                @include mq(sm) {
+                    width: 130px;
+                }
+            }
+        }
+    }
+
+    .nav {
+        &-link {
+            font-family: "eudoxus sans";
+            font-weight: 500;
+            padding-inline: 0 !important;
+            font-size: 18px;
+            line-height: 24px;
+            color: $clr-dark;
+
+            @include mq(lg) {
+                display: inline-block;
+            }
+
+            &:hover {
+                color: $clr-accent;
+            }
+        }
+
+        &-item {
+            margin-right: 30px;
+
+            @include mq(lg) {
+                margin-bottom: 20px;
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link.show {
+        color: $clr-accent !important;
+    }
+
+    .btn_accent {
+        padding: 5px 37px !important;
+    }
+   .dropdown-toggle::after {
+        border: solid $clr-dark;
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-left: .5em;
+    }
+     .navbar-nav .dropdown-menu {
+        background: transparent;
+        border: 1px solid $clr-accent;
+        backdrop-filter: blur(10px);
+        background: rgba( 255, 255, 255, 0.5);
+        .dropdown-item {
+            font-family: "eudoxus sans";
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: $clr-dark;
+            &:hover {
+                color: $clr-accent;
+                background: transparent;
+            }
+        }
+    }
+    &--active  {  
+        background: rgba( 255, 255, 255, 0.5);
+        backdrop-filter:blur(10px);
+        .navbar {
+            padding-block:21px;
+        }
+        z-index: 999;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        animation: fadeIn .3s ease-in-out
+    }
+    .offcanvas-body {
+        @include mq(lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-inline:50px 35px;
+        }
+        
+    }
+    .navbar-toggler {
+        border:0;
+        padding: 0;
+       
+        &:focus {
+            box-shadow: none;
+        }
+        &-icon {
+            background: url(../images/side-bar.svg) no-repeat center;
+            background-size:contain ;
+           
+        }
+    }
+     .dropdown-menu {
+        min-width: 100px;
+    }
+    .offcanvas {
+        background: $clr-white;
+        width: 100%;
+        @include mq(lg) {
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .btn-close {
+           background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%235BA60D'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+           opacity: 1;
+           padding: 2px;
+           margin: 20px;
+           width: 1.5rem;
+           height: 1.5rem;
+           @include mq(sm) {
+            margin: 10px 0px;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        }
+    }
+    .offcanvas-header {
+        @include mq(lg) {
+            padding-inline: 25px;
+            padding-top: 20px;
+            justify-content: flex-end;
+            .header-logo--mobile {
+                display: block !important;
+            }
+        }
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

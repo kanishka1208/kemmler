@@ -1,0 +1,108 @@
+@import './mixins';
+@import './variables';
+
+body {
+    font-family: "eudoxus sans";
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $clr-black;
+    @include mq(sm) {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    font-size: 75px;
+    letter-spacing: 2.7px;
+    line-height: 95px;
+
+    @include mq(lg) {
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
+
+h3 {
+    font-size: 35px;
+    line-height: 95px;
+    font-weight: 400;
+    color: $clr-white;
+    letter-spacing: 1.26px;
+
+    @include mq(md) {
+        font-size: 30px;
+        line-height: 60px;
+    }
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    @include mq(lg) {
+        font-size: 25px;
+        line-height: 30px;
+        padding-bottom: 5px;
+    }
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 700;
+
+    @include mq(md) {
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    @include mq(md) {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+h6 {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+    color: $clr-accent;
+}
+
+
+.h_42 {
+    font-size: 42px;
+    line-height: 53px;
+    padding-bottom: 45px;
+}
+
+.text__small {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.f-25 {
+    font-size: 25px;
+    line-height: 32px;
+    color: $clr-black;
+    font-weight: bold;
+
+    @include mq(md) {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    @include mq(sm) {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
